@@ -7,11 +7,14 @@ class GetCountOfRowsContainingKeyword:
     
     def countRows(self):
         count = 0
-        with open('Test File.txt') as file:
-            for row in file:
-                if search(keyword, row):
-                    count+=1
-        file.close()
+        try:
+            with open("Test File.txt") as file:
+                for row in file:
+                    if search(keyword, row):
+                        count+=1
+            file.close()
+        except Exception as e:
+            print(e)
         return count
 
 while True:
@@ -24,9 +27,9 @@ while True:
         print("\nSearch Keyword in Rows\n")
         print("Enter your Keyword:")
         keyword = input()
-
+        
         NumberOfRowsContainingKeyword = GetCountOfRowsContainingKeyword(keyword)
-
+        
         output = str(NumberOfRowsContainingKeyword.countRows())+" "+"rows constains"+" "+"'"+keyword+"'"+" "+"keyword"
         print(output)
 
