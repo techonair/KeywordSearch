@@ -13,6 +13,7 @@ class GetCountOfRowsContainingKeyword:
                     count+=1
         file.close()
         return count
+
 while True:
 
     print("\nPress '1' to Search a Keyword")
@@ -31,7 +32,7 @@ while True:
 
     elif user_pressed == '0':
         break
-
+    
     else:
         print("\nWrong Response: Please only press 1 or 0, Try again")
     print()
