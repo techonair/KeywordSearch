@@ -8,7 +8,7 @@ class GetCountOfRowsContainingKeyword:
     def countRows(self):
         count = 0
         try:
-            with open("linon Test File.txt") as file:
+            with open("Test File.txt") as file:
                 for row in file:
                     if search(keyword, row):
                         count+=1
