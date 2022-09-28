@@ -14,8 +14,8 @@ class GetCountOfRowsContainingKeyword:
         file.close()
         return count
 while True:
-    print()
-    print("Press '1' to Search a Keyword")
+
+    print("\nPress '1' to Search a Keyword")
     print("Press '0' to Exist")
     user_pressed = input()
 
@@ -34,3 +34,4 @@ while True:
 
     else:
         print("\nWrong Response: Please only press 1 or 0, Try again")
+    print()
