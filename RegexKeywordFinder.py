@@ -1,0 +1,36 @@
+from re import search
+
+class GetCountOfRowsContainingKeyword:
+
+    def __init__(self, keyword):
+        self.keyword = keyword
+    
+    def countRows(self):
+        count = 0
+        with open('Test File.txt') as file:
+            for row in file:
+                if search(keyword, row):
+                    count+=1
+        file.close()
+        return count
+while True:
+    print()
+    print("Press '1' to Search a Keyword")
+    print("Press '0' to Exist")
+    user_pressed = input()
+
+    if user_pressed == '1':
+        print("\nSearch Keyword in Rows\n")
+        print("Enter your Keyword:")
+        keyword = input()
+
+        NumberOfRowsContainingKeyword = GetCountOfRowsContainingKeyword(keyword)
+
+        output = str(NumberOfRowsContainingKeyword.countRows())+" "+"rows constains"+" "+"'"+keyword+"'"+" "+"keyword"
+        print(output)
+
+    elif user_pressed == '0':
+        break
+
+    else:
+        print("\nWrong Response: Please only press 1 or 0, Try again")
